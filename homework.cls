@@ -69,7 +69,7 @@
     \newpage
   }{}
 
-  % Wrap in minipage so that we don't get a line break enywhere in between
+  % Wrap in minipage so that we don't get a line break anywhere in between
   \begin{minipage}{\linewidth}%
     \stepcounter{questionCounter}%
       \vspace{.2in}%
@@ -154,8 +154,8 @@
     % Setup header
     \setlength{\headheight}{15.2pt}
     \setlength{\headsep}{0.2in}
-    \lhead{\hwclass{} \hwlecture\hwsection}%
-    \chead{\hwname{} (\hwemail)}%
+    \lhead{\classid{} \classabb{} \hwlecture\hwsection}%
+    \chead{\stdname{} \stdid}%
     \rhead{\hwtype{} \hwnum}%
 
     % Setup hrule in header
@@ -166,11 +166,13 @@
     \thispagestyle{plain}
 
     \begin{center}
-      {\Large \hwclass{} \hwtype{} \hwnum}
+      {\Large \classid{} \classtitle{} \hwtype{} \hwnum}
 
-      \hwname{} (\hwemail)
+      \stdname{} \stdid
 
-      \today
+      \small{\stdaff}
+
+      \hwdate
     \end{center}
     \renewcommand{\headrulewidth}{0.4pt}
   }
@@ -183,9 +185,9 @@
 
     % Put header on it's own page
     \begin{center}
-      {\Large \hwclass{} \hwtype{} \hwnum}
+      {\Large \classid{} \classabb{} \hwtype{} \hwnum}
 
-      \hwname{} (\hwemail)
+      \stdname{} \stdid
 
       \today
     \end{center}
