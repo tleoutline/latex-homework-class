@@ -154,9 +154,9 @@
     % Setup header
     \setlength{\headheight}{15.2pt}
     \setlength{\headsep}{0.2in}
-    \lhead{\classid{} \classabb{} \hwlecture\hwsection}%
-    \chead{\stdname{} \stdid}%
-    \rhead{\hwtype{} \hwnum}%
+    \lhead{\classid{} \classabb{}}%
+    \chead{\hwtype{} \hwnum}%
+    \rhead{\stdname{} \stdid}%
 
     % Setup hrule in header
     \renewcommand{\headrulewidth}{0pt}
@@ -189,7 +189,7 @@
 
       \stdname{} \stdid
 
-      \today
+      \hwdate
     \end{center}
     \renewcommand{\headrulewidth}{0.4pt}
     \newpage
