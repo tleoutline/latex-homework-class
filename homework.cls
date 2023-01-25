@@ -53,7 +53,7 @@
 \newcounter{partCounter}[questionCounter]
 
 % Prefix for questions
-\newcommand{\questiontype}[0]{Question}
+\newcommand{\questiontype}[0]{Problem}
 
 % Use this if your "written" questions are all under one section
 % For example, if the homework handout has Section 5: Written Questions
@@ -88,6 +88,23 @@
 % Named question, takes one argument
 \WithSuffix\providecommand\question*{}
 \WithSuffix\renewcommand\question*[1]{%
+  % Emit \newpage if option `newpage` is present
+  \ifthenelse{\equal{\@opnewpage}{1}}{%
+    \newpage%
+  }{}%
+  % Wrap in minipage so that we don't get a line break enywhere in between
+  \begin{minipage}{\linewidth}%
+    \addtocounter{questionCounter}{1}%
+    \setcounter{partCounter}{0}%
+    \vspace{.2in}%
+    \noindent{\bf \arabic{questionCounter}.} #1%
+    \vspace{0.3em} \hrule \vspace{.1in}%
+  \end{minipage}
+}
+
+% Named question, takes one argument, Bold title
+\WithSuffix\providecommand\question+{}
+\WithSuffix\renewcommand\question+[1]{%
   % Emit \newpage if option `newpage` is present
   \ifthenelse{\equal{\@opnewpage}{1}}{%
     \newpage%
