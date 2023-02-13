@@ -43,7 +43,12 @@
 
 % Header & Page Setup
 \RequirePackage{fancyhdr}
-\ifthenelse{\equal{\@oplargemargins}{1}}{}{\RequirePackage{fullpage}}
+\ifthenelse{\equal{\@oplargemargins}{1}}{}{\RequirePackage[
+tmargin=0.75in,
+lmargin=0.5in,
+rmargin=0.5in,
+bmargin=1.5in,
+footskip=1in]{geometry}}
 
 % Links
 \RequirePackage{hyperref}
@@ -169,8 +174,8 @@
 \ifthenelse{\equal{\@opanon}{0}}{%
   \renewcommand{\maketitle}[0]{%
     % Setup header
-    \setlength{\headheight}{15.2pt}
-    \setlength{\headsep}{0.2in}
+    \setlength{\headheight}{0.5in}
+    \setlength{\headsep}{0.25in}
     \lhead{\classid{} \classabb{}}%
     \chead{\hwtype{} \hwnum}%
     \rhead{\stdname{} \stdid}%
