@@ -1,5 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-  \PYG{c+c1}{\PYGZsh{}comments!}
-  \PYG{k}{def} \PYG{n+nf}{foo}\PYG{p}{():}
-    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Hi mom!\PYGZdq{}}\PYG{p}{)}
-\end{Verbatim}
